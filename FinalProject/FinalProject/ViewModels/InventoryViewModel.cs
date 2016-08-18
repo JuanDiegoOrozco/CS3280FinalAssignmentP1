@@ -10,26 +10,30 @@ namespace FinalAssignment.ViewModels
 {
     class InventoryViewModel : Conductor<IScreen>.Collection.OneActive
     {
-        private ObservableCollection<Order> icollection;
+        private ObservableCollection<Item> icollection;
         public InventoryViewModel()
         {
             this.DisplayName = "Inventory Application";
 
             //Dummy data
-            Order dummy1 = new Order();
-            dummy1.OrderNumber = 1;
-            dummy1.DatePlaced = DateTime.Today;
-            User dumdum = new User();
-            dumdum.Name = "Mike Jones";
-            dumdum.Phone = "218-330-8004";
-            dumdum.UserId = 1234;
-            dummy1.Purchaser = dumdum;
-            dummy1.TotalCost = 1000000;
+            Item inv1 = new Item();
+            inv1.ItemNumber = 1;
+            inv1.Name = "Boxers";
+            inv1.Cost = 2500;
+            inv1.QuantityOnHand = 250000;
 
-            icollection = new ObservableCollection<Order>();
-            icollection.Add(dummy1);
+            icollection = new ObservableCollection<Item>();
+            icollection.Add(inv1);
+
+            Item inv2 = new Item();
+            inv2.ItemNumber = 2;
+            inv2.Name = "Briefs";
+            inv2.Cost = 2000;
+            inv2.QuantityOnHand = 625000;
+
+            icollection.Add(inv2);
         }
-        public ObservableCollection<Order> AllOrders
+        public ObservableCollection<Item> AllItems
         {
             get
             {
@@ -40,7 +44,7 @@ namespace FinalAssignment.ViewModels
         {
             base.OnActivate();
             Orders();
-            foreach (Order od in icollection)
+            foreach (Item od in icollection)
             {
                 //OrdersViewList.
             }
@@ -51,7 +55,7 @@ namespace FinalAssignment.ViewModels
             //IoC.Get<OrdersViewModel>();
             //OnActivate(ordersVM);
         }
-        IEnumerable<Order> OrdersView
+        IEnumerable<Item> ItemsView
         {
             get { return icollection; }
         }

@@ -7,17 +7,18 @@
         mc:Ignorable="d" Height="359.333" Width="530.667"
        >
     <Grid Background="Orange">
+        <Button x:Name="OrdersB" Content="Orders" HorizontalAlignment="Left" Margin="20,433,0,0" VerticalAlignment="Top" Width="115" Click="OrdersB_Click"/>
+        <Button x:Name="InventoryB" Content="Inventory" HorizontalAlignment="Center" Margin="215,433,199,0" VerticalAlignment="Top" Width="103"  Click="InventoryB_Click"/>
+        <Button x:Name="NewOrdersB" Content="New Orders" HorizontalAlignment="Right" Margin="0,433,10,0" VerticalAlignment="Top" Width="103"  Click="NewOrdersB_Click"/>
         <ListView x:Name="OrdersViewList" HorizontalAlignment="Left" Height="297" Margin="35,39,0,0" VerticalAlignment="Top" Width="457" ItemsSource="{Binding Path=AllOrders}">
             <ListView.View>
                 <GridView ColumnHeaderStringFormat="">
-                    <GridViewColumn Width="85" Header="Order Number"
+                    <GridViewColumn Width="100" Header="Order Number"
                                     DisplayMemberBinding="{Binding Path=OrderNumber}"/>
-                    <GridViewColumn Width="135" Header="Date Placed"
+                    <GridViewColumn Width="150" Header="Date Purchased"
                                     DisplayMemberBinding="{Binding Path=DatePlaced}"/>
-                    <GridViewColumn Width="121" Header="Purchaser"
+                    <GridViewColumn Width="200" Header="Purchaser"
                                     DisplayMemberBinding="{Binding Path=Purchaser.Name}"/>
-                    <GridViewColumn Width="110" Header="Order Total"
-                                    DisplayMemberBinding="{Binding Path=TotalCost}"/>
                 </GridView>
             </ListView.View>
         </ListView>

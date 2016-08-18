@@ -13,16 +13,14 @@
                   ItemsSource="{Binding Path=AllItems}">
             <ListView.View>
                 <GridView ColumnHeaderStringFormat="">
-                    <GridViewColumn Width="80" Header="Item Number"
+                    <GridViewColumn Width="135" Header="Item Number"
                                     DisplayMemberBinding="{Binding Path=ItemNumber}"/>
-                    <GridViewColumn Width="80" Header="Item Name"
-                                    DisplayMemberBinding="{Binding Path=ItemName}"/>
-                    <GridViewColumn Width="85" Header="Item Cost"
-                                    DisplayMemberBinding="{Binding Path=ItemCost}"/>
-                    <GridViewColumn Width="115" Header="Quantity Purchased"
-                                    DisplayMemberBinding="{Binding Path=QuantityPurchased}"/>
-                    <GridViewColumn Width="110" Header="Cost Paid Per Item"
-                                    DisplayMemberBinding="{Binding Path=CostPaidPerItem}"/>
+                    <GridViewColumn Width="135" Header="Item Name"
+                                    DisplayMemberBinding="{Binding Path=Name}"/>
+                    <GridViewColumn Width="100" Header="Item Cost"
+                                    DisplayMemberBinding="{Binding Path=Cost}"/>
+                    <GridViewColumn Width="110" Header="Quantity On Hand"
+                                    DisplayMemberBinding="{Binding Path=QuantityOnHand}"/>
                 </GridView>
             </ListView.View>
         </ListView>

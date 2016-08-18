@@ -11,7 +11,7 @@
         Title="New Tester" Height="569.894" Width="625.667">
     <Grid Background="Aqua">
         <Button x:Name="OrdersB" Command="{Binding Path=OrdersButton}" Content="Orders" HorizontalAlignment="Left" Margin="45,474,0,0" VerticalAlignment="Top" Width="115" Click="OrdersB_Click_1"/>
-        <Button x:Name="InventoryB" Command="{Binding Path=InventoryButton}" Content="Inventory" HorizontalAlignment="Center" Margin="264,474,254.333,0" VerticalAlignment="Top" Width="103" Click="InventoryB_Click"/>
+        <Button x:Name="InventoryB" Command="{Binding Path=InventoryButton}" Content="Inventory" HorizontalAlignment="Center" Margin="259,474,248,0" VerticalAlignment="Top" Width="111" Click="InventoryB_Click"/>
         <Button x:Name="NewOrdersB" Command="{Binding Path=NewOrderButton}" Content="New Orders" HorizontalAlignment="Right" Margin="0,474,10.333,0" VerticalAlignment="Top" Width="103" Click="NewOrdersB_Click"/>
 
         <StackPanel x:Name="theContent">

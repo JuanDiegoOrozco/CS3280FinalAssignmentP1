@@ -48,3 +48,15 @@ D:\CS3280FinalAssignment\FinalProject\FinalProject\InventoryDataInteraction\bin\
 D:\CS3280FinalAssignment\FinalProject\FinalProject\InventoryDataInteraction\obj\Debug\InventoryDataInteraction.csprojResolveAssemblyReference.cache
 D:\CS3280FinalAssignment\FinalProject\FinalProject\InventoryDataInteraction\obj\Debug\InventoryDataInteraction.dll
 D:\CS3280FinalAssignment\FinalProject\FinalProject\InventoryDataInteraction\obj\Debug\InventoryDataInteraction.pdb
+C:\Users\marau\Documents\GitHub\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataInteraction\bin\Debug\InventoryDataInteraction.dll.config
+C:\Users\marau\Documents\GitHub\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataInteraction\bin\Debug\InventoryDataInteraction.dll
+C:\Users\marau\Documents\GitHub\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataInteraction\bin\Debug\InventoryDataInteraction.pdb
+C:\Users\marau\Documents\GitHub\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataInteraction\bin\Debug\InventoryData.dll
+C:\Users\marau\Documents\GitHub\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataInteraction\bin\Debug\InventoryDataMapping.dll
+C:\Users\marau\Documents\GitHub\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataInteraction\bin\Debug\InventoryDataMapping.pdb
+C:\Users\marau\Documents\GitHub\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataInteraction\bin\Debug\InventoryData.pdb
+C:\Users\marau\Documents\GitHub\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataInteraction\bin\Debug\EntityFramework.xml
+C:\Users\marau\Documents\GitHub\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataInteraction\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\marau\Documents\GitHub\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataInteraction\obj\Debug\InventoryDataInteraction.csprojResolveAssemblyReference.cache
+C:\Users\marau\Documents\GitHub\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataInteraction\obj\Debug\InventoryDataInteraction.dll
+C:\Users\marau\Documents\GitHub\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataInteraction\obj\Debug\InventoryDataInteraction.pdb
