@@ -72,3 +72,15 @@ C:\Users\orozc\Documents\CS3280FinalAssignmentP1\FinalProject\FinalProject\Inven
 C:\Users\orozc\Documents\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataInteraction\obj\Debug\InventoryDataInteraction.csprojResolveAssemblyReference.cache
 C:\Users\orozc\Documents\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataInteraction\obj\Debug\InventoryDataInteraction.dll
 C:\Users\orozc\Documents\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataInteraction\obj\Debug\InventoryDataInteraction.pdb
+D:\FinalProd2\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataInteraction\bin\Debug\InventoryDataInteraction.dll.config
+D:\FinalProd2\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataInteraction\bin\Debug\InventoryDataInteraction.dll
+D:\FinalProd2\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataInteraction\bin\Debug\InventoryDataInteraction.pdb
+D:\FinalProd2\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataInteraction\bin\Debug\InventoryData.dll
+D:\FinalProd2\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataInteraction\bin\Debug\InventoryDataMapping.dll
+D:\FinalProd2\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataInteraction\bin\Debug\InventoryDataMapping.pdb
+D:\FinalProd2\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataInteraction\bin\Debug\InventoryData.pdb
+D:\FinalProd2\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataInteraction\bin\Debug\EntityFramework.xml
+D:\FinalProd2\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataInteraction\bin\Debug\EntityFramework.SqlServer.xml
+D:\FinalProd2\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataInteraction\obj\Debug\InventoryDataInteraction.csprojResolveAssemblyReference.cache
+D:\FinalProd2\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataInteraction\obj\Debug\InventoryDataInteraction.dll
+D:\FinalProd2\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataInteraction\obj\Debug\InventoryDataInteraction.pdb

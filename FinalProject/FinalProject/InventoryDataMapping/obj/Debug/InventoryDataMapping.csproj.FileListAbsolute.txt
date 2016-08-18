@@ -40,3 +40,13 @@ C:\Users\marau\Documents\GitHub\CS3280FinalAssignmentP1\FinalProject\FinalProjec
 C:\Users\marau\Documents\GitHub\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataMapping\obj\Debug\InventoryDataMapping.csprojResolveAssemblyReference.cache
 C:\Users\marau\Documents\GitHub\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataMapping\obj\Debug\InventoryDataMapping.dll
 C:\Users\marau\Documents\GitHub\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataMapping\obj\Debug\InventoryDataMapping.pdb
+D:\FinalProd2\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataMapping\bin\Debug\InventoryDataMapping.dll.config
+D:\FinalProd2\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataMapping\bin\Debug\InventoryDataMapping.dll
+D:\FinalProd2\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataMapping\bin\Debug\InventoryDataMapping.pdb
+D:\FinalProd2\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataMapping\bin\Debug\InventoryData.dll
+D:\FinalProd2\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataMapping\bin\Debug\InventoryData.pdb
+D:\FinalProd2\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataMapping\bin\Debug\EntityFramework.xml
+D:\FinalProd2\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataMapping\bin\Debug\EntityFramework.SqlServer.xml
+D:\FinalProd2\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataMapping\obj\Debug\InventoryDataMapping.csprojResolveAssemblyReference.cache
+D:\FinalProd2\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataMapping\obj\Debug\InventoryDataMapping.dll
+D:\FinalProd2\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryDataMapping\obj\Debug\InventoryDataMapping.pdb

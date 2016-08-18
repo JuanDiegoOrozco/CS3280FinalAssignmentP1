@@ -13,3 +13,8 @@ D:\Colin Hamilton\Documents\GitHub\CS-3280-Group-Project\CS3280FinalAssignment\F
 D:\Colin Hamilton\Documents\GitHub\CS-3280-Group-Project\CS3280FinalAssignment\FinalProject\FinalProject\InventoryData\obj\Debug\InventoryData.csprojResolveAssemblyReference.cache
 D:\Colin Hamilton\Documents\GitHub\CS-3280-Group-Project\CS3280FinalAssignment\FinalProject\FinalProject\InventoryData\obj\Debug\InventoryData.dll
 D:\Colin Hamilton\Documents\GitHub\CS-3280-Group-Project\CS3280FinalAssignment\FinalProject\FinalProject\InventoryData\obj\Debug\InventoryData.pdb
+D:\FinalProd2\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryData\bin\Debug\InventoryData.dll
+D:\FinalProd2\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryData\bin\Debug\InventoryData.pdb
+D:\FinalProd2\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryData\obj\Debug\InventoryData.csprojResolveAssemblyReference.cache
+D:\FinalProd2\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryData\obj\Debug\InventoryData.dll
+D:\FinalProd2\CS3280FinalAssignmentP1\FinalProject\FinalProject\InventoryData\obj\Debug\InventoryData.pdb
