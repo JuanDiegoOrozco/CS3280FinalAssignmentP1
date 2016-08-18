@@ -12,6 +12,7 @@ namespace FinalAssignment.ViewModels
     class NewOrderViewModel : Conductor<IScreen>.Collection.OneActive
     {
         private ObservableCollection<Order> icollection;
+        private ObservableCollection<Item> Items;
         public NewOrderViewModel()
         {
             this.DisplayName = "New Order";
@@ -84,20 +85,24 @@ namespace FinalAssignment.ViewModels
             //icollection.Add(thing2);
 
         }
+
+        public IInventoryData DataManager
+        {
+            get; set;
+        }
+
+        protected override async void OnActivate()
+        {
+            base.OnActivate();
+
+            //Items = await DataManager.GetItemsAsync();
+        }
+
         public ObservableCollection<Order> AllOrders
         {
             get
             {
                 return icollection;
-            }
-        }
-        protected override void OnActivate()
-        {
-            base.OnActivate();
-            Orders();
-            foreach (Order od in icollection)
-            {
-                //OrdersViewList.
             }
         }
         public void Orders()

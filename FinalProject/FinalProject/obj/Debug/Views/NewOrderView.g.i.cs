@@ -73,6 +73,14 @@ namespace FinalAssignment.Views {
         #line default
         #line hidden
         
+        
+        #line 25 "..\..\..\Views\NewOrderView.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button SaveBtn;
+        
+        #line default
+        #line hidden
+        
         private bool _contentLoaded;
         
         /// <summary>
@@ -132,6 +140,9 @@ namespace FinalAssignment.Views {
             return;
             case 4:
             this.OrdersViewList = ((System.Windows.Controls.ListView)(target));
+            return;
+            case 5:
+            this.SaveBtn = ((System.Windows.Controls.Button)(target));
             return;
             }
             this._contentLoaded = true;
