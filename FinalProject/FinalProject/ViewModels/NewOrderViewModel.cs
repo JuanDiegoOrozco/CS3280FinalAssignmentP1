@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 using Caliburn.Micro;
 using InventoryData;
 using System.Collections.ObjectModel;
-
+using FinalAssignment.Views;
 namespace FinalAssignment.ViewModels
 {
-    class NewOrderViewModel : Conductor<IScreen>.Collection.OneActive
+    class NewOrderViewModel : Screen
     {
         private ObservableCollection<Order> icollection;
-        private ObservableCollection<Item> Items;
+        private IEnumerable<Item> Items;
+        private static string Title = "Create New Order";
         public NewOrderViewModel()
         {
-            this.DisplayName = "New Order";
+            this.DisplayName = Title;
 
             //Dummy data
             Order ord1 = new Order();
@@ -95,7 +96,9 @@ namespace FinalAssignment.ViewModels
         {
             base.OnActivate();
 
-            //Items = await DataManager.GetItemsAsync();
+            Items = await DataManager.GetItemsAsync();
+
+            //IoC.Get<OrdersViewModel>(). = Title;
         }
 
         public ObservableCollection<Order> AllOrders
