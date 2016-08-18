@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="FinalAssignment.Views.NewOrderView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinalAssignment.Views"
+        mc:Ignorable="d" Height="359.333" Width="530.667"
+       >
+    <Grid Background="Orange">
+        <ListView x:Name="OrdersViewList" HorizontalAlignment="Left" Height="297" Margin="35,39,0,0" VerticalAlignment="Top" Width="457" ItemsSource="{Binding Path=AllOrders}">
+            <ListView.View>
+                <GridView ColumnHeaderStringFormat="">
+                    <GridViewColumn Width="85" Header="Order Number"
+                                    DisplayMemberBinding="{Binding Path=OrderNumber}"/>
+                    <GridViewColumn Width="135" Header="Date Placed"
+                                    DisplayMemberBinding="{Binding Path=DatePlaced}"/>
+                    <GridViewColumn Width="121" Header="Purchaser"
+                                    DisplayMemberBinding="{Binding Path=Purchaser.Name}"/>
+                    <GridViewColumn Width="110" Header="Order Total"
+                                    DisplayMemberBinding="{Binding Path=TotalCost}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</UserControl>
