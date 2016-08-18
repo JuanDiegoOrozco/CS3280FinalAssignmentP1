@@ -24,7 +24,7 @@ namespace FinalAssignment.ViewModels
         /// <summary>
         /// //////////////////////////////
         /// </summary>
-        
+
 
         private ObservableCollection<Order> icollection;
         private IEnumerable<Item> Items;
@@ -140,9 +140,9 @@ namespace FinalAssignment.ViewModels
                 AbleToSave = false;
                 MessageBox.Show("Please Type in the Order Number");
             }
-            else if(regOrderNumber != null)
+            else if (regOrderNumber != null)
             {
-                if(regOrderNumber <= 0)
+                if (regOrderNumber <= 0)
                 {
                     AbleToSave = false;
                     MessageBox.Show("Please Type in a number greater than 0 for Order Number");
@@ -156,7 +156,7 @@ namespace FinalAssignment.ViewModels
                 MessageBox.Show("Please Type in a Purchase Date");
                 AbleToSave = false;
             }
-            else if (!DateTime.TryParse(_UPurchaseDate,out Udate))
+            else if (!DateTime.TryParse(_UPurchaseDate, out Udate))
             {
                 AbleToSave = false;
                 MessageBox.Show("Please enter a proper date format");
@@ -316,3 +316,4 @@ namespace FinalAssignment.ViewModels
 
     }
 }
+
