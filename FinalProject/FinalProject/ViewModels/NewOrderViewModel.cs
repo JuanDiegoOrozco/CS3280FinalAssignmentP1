@@ -26,79 +26,60 @@ namespace FinalAssignment.ViewModels
         /// </summary>
 
 
-        private ObservableCollection<Order> icollection;
+        private ObservableCollection<OrderItem> icollection;
         private IEnumerable<Item> Items;
+        private Item _SelectedItem;
         private static string Title = "Create New Order";
         public NewOrderViewModel()
         {
             this.DisplayName = Title;
 
-            //Dummy data
-            Order ord1 = new Order();
-            ord1.OrderNumber = 5;
-            ord1.DatePlaced = DateTime.Now;
-            User test = new User();
-            test.Name = "John Johnson";
-            test.Phone = "218-330-8004";
-            test.UserId = 1234;
-            ord1.Purchaser = test;
-            ord1.TotalCost = 1000000;
+            //Dummy data for testing
+            Item thing1 = new Item();
+            thing1.Name = "Adidas";
+            thing1.Cost = 69.99m;
+            thing1.ItemNumber = 71;
+            thing1.QuantityOnHand = 17;
 
-            Order ord2 = new Order();
-            ord2.OrderNumber = 6;
-            ord2.DatePlaced = DateTime.Now;
-            User test2 = new User();
-            test2.Name = "Erik Anderson";
-            test2.Phone = "356-318-3450";
-            test2.UserId = 5678;
-            ord2.Purchaser = test2;
-            ord2.TotalCost = 5200;
+            Item thing2 = new Item();
+            thing2.Name = "Retro Jordan 13";
+            thing2.Cost = 249.99m;
+            thing2.ItemNumber = 13;
+            thing2.QuantityOnHand = 17;
 
-            icollection = new ObservableCollection<Order>();
-            icollection.Add(ord1);
-            icollection.Add(ord2);
+            Item thing3 = new Item();
+            thing3.Name = "Playstation 5";
+            thing3.Cost = 499.99m;
+            thing3.ItemNumber = 21;
+            thing3.QuantityOnHand = 17;
 
-            ////////////////////////////////////////////////////////
+            OrderItem dumster1 = new OrderItem();
+            dumster1.ItemNumber = thing1.ItemNumber;
+            dumster1.Quantity = 5;
+            dumster1.ItemCost = 41;
+            dumster1.Item = thing1;
+            dumster1.OrderNumber = 1;
+            dumster1.OrderItemNumber = thing1.ItemNumber;
 
-            //Item thing1 = new Item();
-            //thing1.Name = "Retro Jordan 4";
-            //thing1.Cost = 199.99m;
-            //thing1.ItemNumber = 4;
-            //thing1.OrderItems = dummy1.OrderItems;
-            //thing1.QuantityOnHand = 7;
+            OrderItem dumster2 = new OrderItem();
+            dumster2.ItemNumber = thing1.ItemNumber;
+            dumster2.Quantity = 9;
+            dumster2.ItemCost = 70;
+            dumster2.Item = thing2;
+            dumster2.OrderNumber = 2;
+            dumster2.OrderItemNumber = thing2.ItemNumber;
 
-            //Item thing2 = new Item();
-            //thing2.Name = "Retro Jordan 13";
-            //thing2.Cost = 249.99m;
-            //thing2.ItemNumber = 13;
-            //thing2.OrderItems = dummy2.OrderItems;
-            //thing2.QuantityOnHand = 17;
-
-            //OrderItem dumster1 = new OrderItem();
-            //dumster1.ItemNumber = thing1.ItemNumber;
-            //dumster1.Quantity = 5;
-            //dumster1.ItemCost = 41;
-            //dumster1.Item = thing1;
-            //dumster1.OrderNumber = dummy1.OrderNumber;
-            //dumster1.OrderItemNumber = thing1.ItemNumber;
-            //dumster1.Order = dummy1;
-
-            //OrderItem dumster2 = new OrderItem();
-            //dumster2.ItemNumber = thing1.ItemNumber;
-            //dumster2.Quantity = 9;
-            //dumster2.ItemCost = 70;
-            //dumster2.Item = thing2;
-            //dumster2.OrderNumber = dummy2.OrderNumber;
-            //dumster2.OrderItemNumber = thing2.ItemNumber;
-            //dumster2.Order = dummy1;
-
-            //icollection = new ObservableCollection<OrderItem>();
-            //icollection.Add(dumster1);
-            //icollection.Add(dumster2);
-
-            //icollection = new ObservableCollection<Item>();
-            //icollection.Add(thing1);
-            //icollection.Add(thing2);
+            OrderItem dumster3 = new OrderItem();
+            dumster3.ItemNumber = thing3.ItemNumber;
+            dumster3.Quantity = 9;
+            dumster3.ItemCost = 70;
+            dumster3.Item = thing3;
+            dumster3.OrderNumber = 3;
+            dumster3.OrderItemNumber = thing3.ItemNumber;
+            icollection = new ObservableCollection<OrderItem>();
+            icollection.Add(dumster1);
+            icollection.Add(dumster2);
+            icollection.Add(dumster3);
 
         }
 
@@ -120,6 +101,21 @@ namespace FinalAssignment.ViewModels
 
         }
 
+        /// <summary>
+        /// Used to grab the selected item within the listbox
+        /// </summary>
+        public Item SelectedItem
+        {
+            get
+            {
+                return _SelectedItem;
+            }
+            set
+            {
+                _SelectedItem = value;
+                NotifyOfPropertyChange("SelectedItem");
+            }
+        }
         /// <summary>
         /// This is where you check for valid input and save
         /// </summary>
@@ -192,6 +188,13 @@ namespace FinalAssignment.ViewModels
             }
             //////////////////////////////////////////////////////////_UOrderTotal Error Handeling
 
+            //////////////////////////////////////////////////////////SelectedItem Error Handeling
+            if(_SelectedItem == null)
+            {
+                MessageBox.Show("Please select an item");
+            }
+            //////////////////////////////////////////////////////////SelectedItem Error Handeling
+
         }
 
         protected override async void OnActivate()
@@ -203,7 +206,7 @@ namespace FinalAssignment.ViewModels
             //IoC.Get<OrdersViewModel>(). = Title;
         }
 
-        public ObservableCollection<Order> AllOrders
+        public ObservableCollection<OrderItem> AllItems
         {
             get
             {
@@ -216,21 +219,17 @@ namespace FinalAssignment.ViewModels
             //IoC.Get<OrdersViewModel>();
             //OnActivate(ordersVM);
         }
-        IEnumerable<Order> OrdersView
-        {
-            get { return icollection; }
-        }
 
         /////////////////////////////////////////////////////////////////
 
-        private ObservableCollection<OrderItem> orderItems;
-        public ObservableCollection<OrderItem> AllItems
-        {
-            get
-            {
-                return orderItems;
-            }
-        }
+        //private ObservableCollection<Item> orderItems;
+        //public ObservableCollection<Item> AllItems
+        //{
+        //    get
+        //    {
+        //        return orderItems;
+        //    }
+        //}
 
         /// <summary>
         /// This is where you receive the textbox's information
