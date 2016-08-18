@@ -23,8 +23,9 @@ namespace FinalAssignment.ViewModels
         private ContentControl RESPECK;
         private ContentControl tester;
         private ObservableCollection<Order> icollection;
+        private static string TitleName = "Inventory Application";
         public MainViewModel() {
-            this.DisplayName = "Inventory Application";
+            this.DisplayName = TitleName;
             
             //Dummy data
             Order dummy1 = new Order();
@@ -51,6 +52,11 @@ namespace FinalAssignment.ViewModels
             icollection.Add(dummy1);
             icollection.Add(dummy2);
         }
+
+        /// <summary>
+        /// This area was for functions the binded buttons would perfom
+        /// </summary>
+        /// 
         public void stuff()
         {
            // OrdersView x = new OrdersView();
@@ -110,11 +116,21 @@ namespace FinalAssignment.ViewModels
         protected override void OnActivate() {
             base.OnActivate();
             Orders();
-            
         }
         //http://stackoverflow.com/questions/9580325/does-caliburn-micro-play-nicely-with-user-controls
         
-        
+        public string TitleOfPage
+        {
+            get
+            {
+                return TitleName;
+            }
+            set
+            {
+                TitleName = value;
+                NotifyOfPropertyChange(TitleName);
+            }
+        }
 
         public ContentControl theContent
         {

@@ -6,16 +6,32 @@ using System.Threading.Tasks;
 using Caliburn.Micro;
 using InventoryData;
 using System.Collections.ObjectModel;
+using FinalAssignment.Views;
+using System.Windows.Input;
+using System.Windows;
 
 namespace FinalAssignment.ViewModels
 {
-    class NewOrderViewModel : Conductor<IScreen>.Collection.OneActive
+    class NewOrderViewModel : Screen
     {
+        /// <summary>
+        /// Textbox variables
+        /// </summary>
+        private string _UOrderNumber;
+        private string _UPurchaseDate;
+        private string _UPurchaser;
+        private string _UOrderTotal;
+        /// <summary>
+        /// //////////////////////////////
+        /// </summary>
+        
+
         private ObservableCollection<Order> icollection;
-        private ObservableCollection<Item> Items;
+        private IEnumerable<Item> Items;
+        private static string Title = "Create New Order";
         public NewOrderViewModel()
         {
-            this.DisplayName = "New Order";
+            this.DisplayName = Title;
 
             //Dummy data
             Order ord1 = new Order();
@@ -91,11 +107,100 @@ namespace FinalAssignment.ViewModels
             get; set;
         }
 
+        /// <summary>
+        /// Save Button Handeling. It called the CheckANDSave function when triggered...
+        /// </summary>
+        public ICommand SaveOrderB
+        {
+            get
+            {
+                //MessageBox.Show("NewOrdersButton Triggered");
+                return new DelegateCommand<object>(CheckANDSave, true);
+            }
+
+        }
+
+        /// <summary>
+        /// This is where you check for valid input and save
+        /// </summary>
+        public void CheckANDSave()
+        {
+            bool AbleToSave = true;//used to see if they can save
+            int regOrderNumber;// if parse is successful this should have a value
+            DateTime Udate;// tool for parsing dates this should have a value if successful
+            decimal OrderTotal;// if parse is successful this should have a value
+            //////////////////////////////////////////////////////////_UOrderNumber Error Handeling
+            if (String.IsNullOrWhiteSpace(_UOrderNumber))
+            {// check if empty
+                MessageBox.Show("Please Type in the Order Number");
+                AbleToSave = false;
+            }
+            else if (!Int32.TryParse(_UOrderNumber, out regOrderNumber))
+            {
+                AbleToSave = false;
+                MessageBox.Show("Please Type in the Order Number");
+            }
+            else if(regOrderNumber != null)
+            {
+                if(regOrderNumber <= 0)
+                {
+                    AbleToSave = false;
+                    MessageBox.Show("Please Type in a number greater than 0 for Order Number");
+                }
+            }
+            //////////////////////////////////////////////////////////_UOrderNumber Error Handeling
+
+            //////////////////////////////////////////////////////////_UPurchaseDate Error Handeling
+            if (String.IsNullOrWhiteSpace(_UPurchaseDate))
+            {// check if empty
+                MessageBox.Show("Please Type in a Purchase Date");
+                AbleToSave = false;
+            }
+            else if (!DateTime.TryParse(_UPurchaseDate,out Udate))
+            {
+                AbleToSave = false;
+                MessageBox.Show("Please enter a proper date format");
+            }
+            //////////////////////////////////////////////////////////_UPurchaseDate Error Handeling
+
+            //////////////////////////////////////////////////////////_UPurchaser Error Handeling
+            if (String.IsNullOrWhiteSpace(_UPurchaser))
+            {// check if empty
+                MessageBox.Show("Please Type in a Purchaser");
+                AbleToSave = false;
+            }
+            //////////////////////////////////////////////////////////_UPurchaser Error Handeling
+
+            //////////////////////////////////////////////////////////_UOrderTotal Error Handeling
+            if (String.IsNullOrWhiteSpace(_UOrderTotal))
+            {// check if empty
+                MessageBox.Show("Please Type in the Order Total");
+                AbleToSave = false;
+            }
+            else if (!Decimal.TryParse(_UOrderTotal, out OrderTotal))
+            {
+                AbleToSave = false;
+                MessageBox.Show("Please Type in the Order Number");
+            }
+            else if (OrderTotal != null)
+            {
+                if (OrderTotal <= 0)
+                {
+                    AbleToSave = false;
+                    MessageBox.Show("Please Type in a number greater than 0 for Order Total");
+                }
+            }
+            //////////////////////////////////////////////////////////_UOrderTotal Error Handeling
+
+        }
+
         protected override async void OnActivate()
         {
             base.OnActivate();
 
-            //Items = await DataManager.GetItemsAsync();
+            Items = await DataManager.GetItemsAsync();
+
+            //IoC.Get<OrdersViewModel>(). = Title;
         }
 
         public ObservableCollection<Order> AllOrders
@@ -126,6 +231,88 @@ namespace FinalAssignment.ViewModels
                 return orderItems;
             }
         }
+
+        /// <summary>
+        /// This is where you receive the textbox's information
+        /// </summary>
+        /// 
+        public string UOrderNumber
+        {
+            get
+            {
+                return _UOrderNumber;
+            }
+            set
+            {
+                _UOrderNumber = value;
+                NotifyOfPropertyChange(_UOrderNumber);
+            }
+        }
+        public string UPurchaseDate
+        {
+            get
+            {
+                return _UPurchaseDate;
+            }
+            set
+            {
+                _UPurchaseDate = value;
+                NotifyOfPropertyChange(_UPurchaseDate);
+            }
+        }
+        public string UPurchaser
+        {
+            get
+            {
+                return _UPurchaser;
+            }
+            set
+            {
+                _UPurchaser = value;
+                NotifyOfPropertyChange(_UPurchaser);
+            }
+        }
+        public string UOrderTotal
+        {
+            get
+            {
+                return _UOrderTotal;
+            }
+            set
+            {
+                _UOrderTotal = value;
+                NotifyOfPropertyChange(_UOrderTotal);
+            }
+        }
+        /// <summary>
+        /// ///////////////////////////////////////////////////////
+        /// </summary>
+        /// 
+
+        internal class DelegateCommand<T> : ICommand
+        {
+            private System.Action stuff;
+            private bool v;
+
+            public DelegateCommand(System.Action stuff, bool v)
+            {
+                this.stuff = stuff;
+                this.v = v;
+            }
+
+            public event EventHandler CanExecuteChanged;
+
+            public bool CanExecute(object parameter)
+            {
+                return true;
+            }
+
+            public void Execute(object parameter)
+            {
+                stuff();
+            }
+        }
+
 
     }
 }
