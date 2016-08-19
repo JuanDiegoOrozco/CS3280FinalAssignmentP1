@@ -28,7 +28,7 @@ namespace FinalAssignment.ViewModels
 
         private ObservableCollection<OrderItem> icollection;
         private IEnumerable<Item> Items;
-        private Item _SelectedItem;
+        private OrderItem _SelectedItem;
         private static string Title = "Create New Order";
         public NewOrderViewModel()
         {
@@ -104,7 +104,7 @@ namespace FinalAssignment.ViewModels
         /// <summary>
         /// Used to grab the selected item within the listbox
         /// </summary>
-        public Item SelectedItem
+        public OrderItem SelectedItem
         {
             get
             {
